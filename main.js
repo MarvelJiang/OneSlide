@@ -241,7 +241,7 @@ const Print = {
     this.$downloadBtn.onclick = () => {
       let $link = document.createElement('a')
       $link.target = '_blank'
-      $link.href = location.href.replace(/\?.*/,'?print-pdf')
+      $link.href = location.href.replace(/#\/.*/,'?print-pdf')
       $link.click()
     }
   }
