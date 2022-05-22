@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>OutSlide - 极简PPT制作</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+<!--		<link rel="stylesheet" href="dist/theme/beige.css" id="theme">-->
+		<link rel="stylesheet" href="main.css">
+		<link rel="stylesheet" href="//at.alicdn.com/t/font_3417577_uscdarkjd4b.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	</head>
+
+	<body>
+		<div class="control">
+			<span class="iconfont icon-setting"></span>
+		</div>
+		<div class="menu">
+			<span class="iconfont icon-close"></span>
+			<div class="detail">
+				<div class="tab active"><span class="iconfont icon-editor"></span>内容编辑</div>
+				<div class="tab"><span class="iconfont icon-theme"></span>主题与特效</div>
+				<div class="tab"><span class="iconfont icon-download"></span> 下载PDF</div>
+				<div class="tab"><span class="iconfont icon-help"></span>帮助</div>
+				<div class="content active">
+					<div class="header">编辑</div>
+					<div class="body editor">
+						<textarea></textarea>
+						<div class="uploader">
+							<input type="file" id="img-uploader" accept="image/*">
+							<label for="img-uploader">点击上传图片（支持.png\.jpg\.gif，不大于2M）</label>
+						</div>
+						<div>
+							<button class="button-save">保存</button>
+						</div>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">主题与特效</div>
+					<div class="body theme">
+						<h5>主题</h5>
+						<div class="themes">
+							<div class="inner">
+							<figure data-theme="beige">
+								<img src="./img/beige.jpg" alt="">
+								<figcaption>beige</figcaption>
+							</figure>
+							<figure data-theme="blood">
+								<img src="./img/blood.jpg" alt="">
+								<figcaption>blood</figcaption>
+							</figure>
+							<figure data-theme="league">
+								<img src="./img/league.jpg" alt="">
+								<figcaption>league</figcaption>
+							</figure>
+							<figure data-theme="moon">
+								<img src="./img/moon.jpg" alt="">
+								<figcaption>moon</figcaption>
+							</figure>
+							<figure data-theme="night">
+								<img src="./img/night.jpg" alt="">
+								<figcaption>night</figcaption>
+							</figure>
+							<figure data-theme="serif">
+								<img src="./img/serif.jpg" alt="">
+								<figcaption>serif</figcaption>
+							</figure>
+							<figure data-theme="simple">
+								<img src="./img/simple.jpg" alt="">
+								<figcaption>simple</figcaption>
+							</figure>
+							<figure data-theme="sky">
+								<img src="./img/sky.jpg" alt="">
+								<figcaption>sky</figcaption>
+							</figure>
+						</div>
+						</div>
+						<h5>转场特效</h5>
+							<select class="transition">
+								<option value="none">默认</option>
+								<option value="slide">滑动</option>
+								<option value="fade">淡化</option>
+								<option value="convex">凸出</option>
+								<option value="concave">凹陷</option>
+								<option value="zoom">缩放</option>
+							</select>
+						<h5>对齐方式</h5>
+						<select class="align">
+							<option value="center">居中对齐</option>
+							<option value="left-top">靠左对齐</option>
+						</select>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">下载PDF</div>
+					<div class="body download">
+						<section>
+							<h3>第一步：点击按钮将PPT转换成PDF格式</h3>
+							<button class="downloadBtn">生成PDF文件</button>
+						</section>
+						<section>
+							<h3>第二步：点击鼠标右键打开菜单栏，选择打印...</h3>
+							<img src="./img/找到打印.jpg">
+						</section>
+						<section>
+							<h3>第三步：你可以选择打印或者保存PDF</h3>
+							<img src="./img/保存PDF.jpg">
+						</section>
+					</div>
+				</div>
+				<div class="content">
+					<div class="header">帮助</div>
+					<div class="body help">
+						<ul>
+							<li>
+								<h3>如何学习 markdown 语法？</h3>
+								<a href="https://markdown.com.cn/" target="_blank">点击查看 markdown 官方文档</a>
+							</li>
+							<li>
+								<h3>按 S 尝试进入演讲者模式</h3>
+								<img src="./img/演讲者模式.jpg">
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			</div>
+
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/zoom/zoom.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/search/search.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+
+			// Also available as an ES module, see:
+			// https://revealjs.com/initialization/
+			// Reveal.initialize({
+			// 	controls: true,
+			// 	progress: true,
+			// 	center: true,
+			// 	hash: true,
+			//
+			// 	// Learn about plugins: https://revealjs.com/plugins/
+			// 	plugins: [ RevealZoom, RevealNotes, RevealSearch, RevealMarkdown, RevealHighlight ]
+			// });
+
+		</script>
+		<script src="//cdn.jsdelivr.net/npm/leancloud-storage@4.2.0/dist/av-min.js"></script>
+		<script src="main.js"></script>
+
+	</body>
+</html>
